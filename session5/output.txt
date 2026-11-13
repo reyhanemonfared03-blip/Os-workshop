@@ -1,0 +1,31 @@
+===== Step 1: top 5 memory-consuming processes =====
+--- Command: ps aux --sort=-%mem | head -n 6 > top_mem.txt
+
+===== Step 2: view the saved file =====
+--- Command: cat top_mem.txt
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+reyhane     11  0.0  0.1  19140  4404 tty1     S    20:17   0:01 -bash
+reyhane    227  0.0  0.0  16740  2168 tty1     T    22:00   0:00 nano answers.md
+reyhane    434  0.0  0.0  18660  1868 tty1     R    23:02   0:00 ps aux --sort=-%mem
+reyhane    435  0.0  0.0  15288   836 tty1     S    23:02   0:00 head -n 6
+root         1  0.0  0.0   8940   228 ?        Ssl  20:17   0:00 /init
+
+===== Step 3 and 4: SIGSTOP and SIGKILL on a test process =====
+[2] 437
+Test process started with PID: 437
+--- State before (S = sleeping):
+  PID STAT CMD
+  437 R    sleep 500
+--- Command: kill -STOP 437
+
+[2]+  Stopped                 sleep 500
+--- State after SIGSTOP (T = stopped):
+  PID STAT CMD
+  437 T    sleep 500
+--- Command: kill -9 437
+[2]+  Killed                  sleep 500
+--- State after SIGKILL (no process listed = killed):
+  PID STAT CMD
+
+===== Step 5: cron line (not installed, only shown) =====
+0 2 * * 5 sync; echo 3 > /proc/sys/vm/drop_caches
