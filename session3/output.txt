@@ -1,0 +1,30 @@
+===== Challenge 1: grep -c (count matching lines) =====
+--- Content of system.log:
+error one
+ok
+error two
+ok
+--- Command: grep -c "error" system.log
+2
+
+===== Challenge 2: find all .conf files in /etc (first 5 results) =====
+--- Command: find /etc -type f -name "*.conf" 2>/dev/null | head -n 5
+/etc/adduser.conf
+/etc/apparmor/parser.conf
+/etc/apport/crashdb.conf
+/etc/apt/apt.conf.d/20snapd.conf
+/etc/ca-certificates.conf
+
+===== Challenge 3: lines 1000 to 1010 of data.csv =====
+--- Command: head -n 1010 data.csv | tail -n 11
+1000
+1001
+1002
+1003
+1004
+1005
+1006
+1007
+1008
+1009
+1010

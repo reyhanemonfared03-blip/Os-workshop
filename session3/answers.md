@@ -20,3 +20,6 @@ Print only lines 1000 to 1010 of `data.csv`. `head` takes the first 1010 lines, 
 ```bash
 head -n 1010 data.csv | tail -n 11
 ```
+
+## Proof of execution
+The real terminal output of these commands is saved in `output.txt`.
