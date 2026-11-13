@@ -1,0 +1,21 @@
+===== Challenge 1: rectangle.sh (length=5, width=3) =====
+Area: 15
+Perimeter: 16
+
+
+===== Challenge 1: rectangle.sh (length=10, width=4) =====
+Area: 40
+Perimeter: 28
+
+
+===== Challenge 2: check_user.sh root =====
+User 'root' exists on this system.
+
+===== Challenge 2: check_user.sh reyhane =====
+User 'reyhane' exists on this system.
+
+===== Challenge 2: check_user.sh nouser123 =====
+User 'nouser123' does NOT exist on this system.
+
+===== Challenge 2: check_user.sh (no argument) =====
+Usage: ./check_user.sh username
