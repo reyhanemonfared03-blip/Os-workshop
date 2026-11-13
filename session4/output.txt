@@ -1,0 +1,10 @@
+===== Terminal Challenge: chmod g-x deploy.sh =====
+--- Before:
+-rwxr-xr-x 1 reyhane reyhane 0 Nov 13 22:55 deploy.sh
+--- After chmod g-x:
+-rwxr--r-x 1 reyhane reyhane 0 Nov 13 22:55 deploy.sh
+
+===== Theory Challenge: umask 027 =====
+mkdir: cannot create directory ‘test_dir’: File exists
+--- New directory permissions:
+drwxr-x--- 1 reyhane reyhane 4096 Nov 13 22:52 test_dir
